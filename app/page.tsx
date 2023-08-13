@@ -171,7 +171,7 @@ export default function Home() {
                       delay: 0.5,
                       duration: 2,
                     }}
-                    className="signInBtn sm:w-full transition ease-in-out delay-150 bg-blue-500 hover:translate-y-1 hover:scale-110 hover:bg-indigo duration-150 px-3 py-3  font-bold rounded-md text-slate-200  "
+                    className="signInBtn sm:w-full md:w-1/4 lg:w-1/4 transition ease-in-out delay-150 bg-blue-500 hover:translate-y-1 hover:scale-110 hover:bg-indigo duration-150 px-3 py-3  font-bold rounded-md text-slate-200  "
                   >
                     Get Started
                   </motion.button>
@@ -181,12 +181,12 @@ export default function Home() {
                   Who supports us
                 </p>
                 <footer className="md:w-[83%] md:mx-auto pb-7 sm:w-[90%] sm:text-start sm:mx-auto ">
-                  <ul className="flex gap-5 mt-5 sm:grid sm:grid-cols-2  sm:gap-3">
+                  <ul className="lg:flex md:flex gap-5 mt-5 sm:grid sm:grid-cols-2  sm:gap-3">
                     <li>
                       {" "}
                       <Link href="">
                         <Image
-                          className="sm:w-[55%]"
+                          className="sm:w-[55%] md:w-[70%] lg:w-[100%]"
                           sizes="(min-width:200px), 80vw"
                           alt="git"
                           width="110"
@@ -200,7 +200,7 @@ export default function Home() {
                       {" "}
                       <Link href="">
                         <Image
-                          className="sm:w-[55%]"
+                          className="sm:w-[55%] md:w-[70%] lg:w-[100%]"
                           alt="git"
                           width="110"
                           height="28"
@@ -213,10 +213,12 @@ export default function Home() {
                       {" "}
                       <Link href="">
                         <Image
-                          className="sm:w-[55%]"
+                          className="sm:w-[55%] md:w-[70%] lg:w-[100%]"
+                          sizes="(min-width:200px), 80vw"
                           alt="git"
                           width="110"
                           height="28"
+                          
                           src="/netflix.png"
                         />
                       </Link>
@@ -226,7 +228,8 @@ export default function Home() {
                       {" "}
                       <Link href="">
                         <Image
-                          className="sm:w-[55%]"
+                       className="sm:w-[55%] md:w-[70%] lg:w-[100%]"
+                       sizes="(min-width:200px), 80vw"
                           alt="git"
                           width="112"
                           height="28"
