@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
    screens: {
       'xs':'200px',
-      'sm': '375px',
+      'sm': '200px',
       // => @media (min-width: 640px) { ... }
 
       'md': '768px',
@@ -33,6 +33,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("flowbite/plugin")
+  ],
 }
 export default config

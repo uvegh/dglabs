@@ -2,26 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+nav{
+background: rgba(43, 99, 217, 1);
+border-bottom:  1px solid rgba(100, 142, 247, 1);
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+;
+}
+.blue{
+color: rgba(67, 126, 247, 1);
+
+}
+.signInBtn{
+  background: rgba(67, 126, 247, 1);
+
+}
+.banner{
+  background: rgba(43, 99, 217, 1);
+
+}
+.faintText{
+  color: rgba(177, 204, 251, 1);
+
+}
+.textGray{
+  color: rgba(95, 109, 126, 1);
+  
+
+}
+.minHeight{
+  height: 5rem;
+}
+.grayBg{
+  background: rgba(21, 27, 40, 1);
+
+}
+.textNeutralGray{
+  color: rgba(165, 172, 186, 1);
+
+}
+.bgNeutralGray{
+  background: rgba(248, 249, 251, 1);
 }
