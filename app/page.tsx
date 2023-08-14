@@ -46,8 +46,7 @@ export default function Home() {
               viewBox="0 0 17 14"
             >
               <path
-
-stroke="currentColor"
+                stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
@@ -122,57 +121,42 @@ stroke="currentColor"
         </div>
       </nav>
 
-      <Navbar
-  fluid={true}
-  rounded={false}
-  
-  className="lg:hidden"
->
-  <Navbar.Brand >
-  <Link href="..">
-                  <Image alt="logo" width="150" height="28" src="/logo.png" />
-                </Link>
-    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-      
-    </span>
-  </Navbar.Brand>
-  <Navbar.Toggle />
-  <Navbar.Collapse className="text-white ">
-    <div className="">
-    <Navbar.Link
-      href="/navbars"
-      active={true}
-    >
-      Home
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      Our Products
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      Resources
-    </Navbar.Link>
-    </div>
-    <Navbar.Link href="/navbars">
-      Contact
-    </Navbar.Link>
-   
+      <Navbar fluid={true} rounded={false} className="lg:hidden">
+        <Navbar.Brand>
+          <Link href="..">
+            <Image alt="logo" width="150" height="28" src="/logo.png" />
+          </Link>
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white"></span>
+        </Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="text-white ">
+          <div className="">
+            <Navbar.Link href="/navbars" active={true}>
+              Home
+            </Navbar.Link>
+            <Navbar.Link href="/navbars">Our Products</Navbar.Link>
+            <Navbar.Link href="/navbars">Resources</Navbar.Link>
+          </div>
+          <Navbar.Link href="/navbars">Contact</Navbar.Link>
 
-    <div className="signup flex  text-white gap-2">
-            <Navbar.Link  href="" className="px-3 py-3 ">
+          <div className="signup flex  text-white gap-2">
+            <Navbar.Link href="" className="px-3 py-3 ">
               Log in
-            </Navbar.Link >
-            <Navbar.Link 
+            </Navbar.Link>
+            <Navbar.Link
               href=".."
               className="signInBtn px-3 py-3 rounded-md hover:bg-blue-500 hover:translate-x-2 transition-all"
             >
               Sign Up
-            </Navbar.Link >
+            </Navbar.Link>
           </div>
-  </Navbar.Collapse>
-
-  
-</Navbar>
-      <main className="banner">
+        </Navbar.Collapse>
+      </Navbar>
+      <motion.main
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="banner"
+      >
         <motion.section className=" max-w-screen-xl ">
           <div className="lg:grid lg:grid-cols-2 lg:grid-flow-col sm:flex  sm:flex-col-reverse md:flex  md:flex-col-reverse ">
             <motion.div
@@ -269,7 +253,6 @@ stroke="currentColor"
                           alt="git"
                           width="110"
                           height="28"
-                          
                           src="/netflix.png"
                         />
                       </Link>
@@ -279,8 +262,8 @@ stroke="currentColor"
                       {" "}
                       <Link href="">
                         <Image
-                       className="sm:w-[55%] md:w-[70%] lg:w-[100%]"
-                       sizes="(min-width:200px), 80vw"
+                          className="sm:w-[55%] md:w-[70%] lg:w-[100%]"
+                          sizes="(min-width:200px), 80vw"
                           alt="git"
                           width="112"
                           height="28"
@@ -317,7 +300,7 @@ stroke="currentColor"
             </motion.div>
           </div>
         </motion.section>
-      </main>
+      </motion.main>
 
       <motion.section
         className="text-center mt-4 sm:mx-auto sm:w-[90%] "
@@ -342,12 +325,25 @@ stroke="currentColor"
         </p>
       </motion.section>
 
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         className="lg:grid lg:grid-cols-3  gap-y-12 gap-x-5 max-w-screen-xl md:w-[80%] mx-auto mt-5 md:grid-cols-2
       sm:mx-auto sm:w-[90%] sm:grid-cols-1
       "
       >
-        <motion.div>
+        <motion.div
+          initial={{
+            y: -10000,
+          }}
+          animate={{
+            x: 0,
+          }}
+          transition={{
+            delay: 0.8,
+            duration: 0.5,
+          }}
+        >
           <section>
             <Image
               alt="icon"
@@ -376,7 +372,18 @@ stroke="currentColor"
           </Link>
         </motion.div>
 
-        <motion.div>
+        <motion.div
+          initial={{
+            y: -10000,
+          }}
+          animate={{
+            x: 0,
+          }}
+          transition={{
+            delay: 0.6,
+            duration: 0.5,
+          }}
+        >
           <section>
             <Image
               alt="icon"
@@ -405,7 +412,18 @@ stroke="currentColor"
           </Link>
         </motion.div>
 
-        <motion.div>
+        <motion.div
+          initial={{
+            y: -10000,
+          }}
+          animate={{
+            x: 0,
+          }}
+          transition={{
+            delay: 0.4,
+            duration: 0.5,
+          }}
+        >
           <section>
             <Image
               alt="icon"
@@ -434,7 +452,18 @@ stroke="currentColor"
           </Link>
         </motion.div>
 
-        <motion.div>
+        <motion.div
+          initial={{
+            y: -10000,
+          }}
+          animate={{
+            x: 0,
+          }}
+          transition={{
+            delay: 0.8,
+            duration: 0.5,
+          }}
+        >
           <section>
             <Image
               alt="icon"
@@ -463,7 +492,18 @@ stroke="currentColor"
           </Link>
         </motion.div>
 
-        <motion.div>
+        <motion.div
+          initial={{
+            y: -10000,
+          }}
+          animate={{
+            x: 0,
+          }}
+          transition={{
+            delay: 0.6,
+            duration: 0.5,
+          }}
+        >
           <section>
             <Image
               alt="icon"
@@ -492,7 +532,18 @@ stroke="currentColor"
           </Link>
         </motion.div>
 
-        <motion.div>
+        <motion.div
+          initial={{
+            y: -10000,
+          }}
+          animate={{
+            x: 0,
+          }}
+          transition={{
+            delay: 0.4,
+            duration: 0.5,
+          }}
+        >
           <section>
             <Image
               alt="icon"
@@ -520,7 +571,7 @@ stroke="currentColor"
             </span>
           </Link>
         </motion.div>
-      </div>
+      </motion.div>
 
       <motion.section
         className="text-center mt-4 sm:mx-auto sm:w-[90%] "
@@ -546,7 +597,11 @@ stroke="currentColor"
         </p>
       </motion.section>
 
-      <main className="max-w-screen-xl mx-auto mt-8 md:w-[80%] container sm:mx-auto sm:w-[90%]">
+      <motion.main
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="max-w-screen-xl mx-auto mt-8 md:w-[80%] container sm:mx-auto sm:w-[90%]"
+      >
         <div className="lg:grid lg:grid-cols-2  gap-x-4 md:flex sm:max-md:gap-y-6 md:max-lg:gap-y-6 md:flex-col-reverse   md-mx-auto sm:flex sm:flex-col-reverse sm-gap-x-4 p-8">
           <section className=" flex flex-col gap-y-8 md:mx-auto md:mt-8">
             <motion.div className="col flex gap-x-6 ">
@@ -658,12 +713,28 @@ stroke="currentColor"
             />
           </section>
         </div>
-      </main>
+      </motion.main>
 
       <div className="grayBg  pb-5 sm:pt-5">
-        <main className="max-w-screen-xl mx-auto pt-12 sm:mx-auto  sm:w-[90%]">
+        <motion.section
+          className="max-w-screen-xl mx-auto pt-12 sm:mx-auto  sm:w-[90%]"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+        >
           <div className="lg:grid lg:grid-cols-2  gap-x-4 md:grid-cols-1  md:gap-y-8 sm:grid-cols-1 sm:gap-y-8">
-            <section className="mx-auto">
+            <motion.section
+              className="mx-auto"
+              initial={{
+                y: -10000,
+              }}
+              animate={{
+                x: 0,
+              }}
+              transition={{
+                delay: 0.8,
+                duration: 0.5,
+              }}
+            >
               <Image
                 alt="photo"
                 src="/Photo2.png"
@@ -671,7 +742,7 @@ stroke="currentColor"
                 width="560"
                 height="560"
               />
-            </section>
+            </motion.section>
 
             <section className=" flex flex-col gap-y-8 mx-auto my-auto">
               <motion.div
@@ -683,7 +754,7 @@ stroke="currentColor"
                 }}
                 transition={{
                   duration: "0.6",
-                  delay: 0.6,
+                  delay: 0.4,
                 }}
                 className="col flex gap-x-6"
               >
@@ -801,7 +872,7 @@ stroke="currentColor"
               </motion.div>
             </section>
           </div>
-        </main>
+        </motion.section>
       </div>
       <motion.section
         className="text-center mt-4 lg:hidden md:block sm:block  sm:w-[90%] sm:mx-auto"
@@ -837,28 +908,28 @@ stroke="currentColor"
 
           <p className=" text-center lg:w-[72%] lg:object-fill lg:mx-auto lg:text-center font-semibold  text-2xl  lg:text-3xl text-slate-800 p-4 sm:p-0 mt-5 rounded sm-text-start sm:text-sm">
             Thank you for making it painless, pleasant and most of all hassle{" "}
-             free! I love LookScout. I can't say enough about LookScout.{" "}
-             Great job, I will definitely be ordering again!{" "}
+            free! I love LookScout. I can't say enough about LookScout. Great
+            job, I will definitely be ordering again!{" "}
           </p>
           <Link
-              href=".."
-              className="flex blue lg:w-[72%] lg:text-center lg:mx-auto lg:mt-5  gap-3 font-bold  lg:justify-ccenter  group"
-            >
-              <div>
-                <Image
-                  src="/Avatar 3.png"
-                  className="rounded-full group:"
-                  width="40"
-                  height="40"
-                  alt=""
-                />
-              </div>
-              <span className="text-sm flex flex-col  group-hover:translate-x-4 : hover:translate-x-4 transition-all duration-300 ease-in-out blue  font-bold  ">
-                <p className="font-bold  text-slate-900">Lisa smith</p>
+            href=".."
+            className="flex blue lg:w-[72%] lg:text-center lg:mx-auto lg:mt-5  gap-3 font-bold  lg:justify-ccenter  group"
+          >
+            <div>
+              <Image
+                src="/Avatar 3.png"
+                className="rounded-full group:"
+                width="40"
+                height="40"
+                alt=""
+              />
+            </div>
+            <span className="text-sm flex flex-col  group-hover:translate-x-4 : hover:translate-x-4 transition-all duration-300 ease-in-out blue  font-bold  ">
+              <p className="font-bold  text-slate-900">Lisa smith</p>
 
-                <p className="font-light textGray">CEO</p>
-              </span>
-            </Link>
+              <p className="font-light textGray">CEO</p>
+            </span>
+          </Link>
         </section>
       </div>
 
@@ -1029,10 +1100,11 @@ stroke="currentColor"
               height="300"
             />
             <h1 className="font-bold text-xl text-slate-900 mt-5">
-            Generate social with the aim to take this offline.
+              Generate social with the aim to take this offline.
             </h1>
             <p className="textGray font-normal mt-5 minHeight ">
-            Synchronising scrum masters with the possibility to surprise and delight to the surprise and delight scrum masters.
+              Synchronising scrum masters with the possibility to surprise and
+              delight to the surprise and delight scrum masters.
             </p>
           </section>
 
@@ -1070,10 +1142,11 @@ stroke="currentColor"
               height="300"
             />
             <h1 className="font-bold text-xl text-slate-900 mt-5">
-            Generate social with the aim to take this offline.
+              Generate social with the aim to take this offline.
             </h1>
             <p className="textGray font-normal mt-5 minHeight">
-            Synchronising scrum masters with the possibility to surprise and delight to the surprise and delight scrum masters.
+              Synchronising scrum masters with the possibility to surprise and
+              delight to the surprise and delight scrum masters.
             </p>
           </section>
 
@@ -1111,10 +1184,11 @@ stroke="currentColor"
               height="300"
             />
             <h1 className="font-bold text-xl text-slate-900 mt-5">
-            Generate social with the aim to take this offline.
+              Generate social with the aim to take this offline.
             </h1>
             <p className="textGray font-normal mt-5 minHeight ">
-            Synchronising scrum masters with the possibility to surprise and delight to the surprise and delight scrum masters.
+              Synchronising scrum masters with the possibility to surprise and
+              delight to the surprise and delight scrum masters.
             </p>
           </section>
 
@@ -1161,7 +1235,9 @@ stroke="currentColor"
           Proud to Be Used By
         </motion.h1>
         <p className="mt-2 textGray font-normal  md: break-words lg:w-[72%] lg:object-fill lg:mx-auto lg:pt-5 lg:pb-5">
-        Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+          Professionally cultivate one-to-one customer service with robust
+          ideas. Dynamically innovate resource-leveling customer service for
+          state of the art customer service.
         </p>
 
         <section className="container flex justify-between mx-auto p-12 lg:flex-row md:flex-row sm:flex-col sm:gap-10">
@@ -1215,10 +1291,10 @@ stroke="currentColor"
           <p className="blue sm:text-sm">1% OF THE INDUSRTY</p>
 
           <p className=" text-center  font-bold lg:text-3xl sm:text-xl  text-slate-800 p-4 mt-5 lg:mx-auto lg:pt-5 lg:pb-5 lg:w-[72%] ">
-            Welcome to your new digital reality that will rock  your world
-            truly at all throughout.{" "}
+            Welcome to your new digital reality that will rock your world truly
+            at all throughout.{" "}
           </p>
-{/* large screen */}
+          {/* large screen */}
           <form action="" className="sm:hidden md:block lg:block">
             <div className="mb-6 ">
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
@@ -1238,7 +1314,7 @@ stroke="currentColor"
             </div>
           </form>
 
-{/* small screen */}
+          {/* small screen */}
           <form action="" className="lg:hidden md:hidden sm:block sm:w-[98%]">
             <div className="mb-6 ">
               <label className=" mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
@@ -1257,7 +1333,6 @@ stroke="currentColor"
               </div>
             </div>
           </form>
-
 
           <div className="flex lg:justify-center sm:justify-start gap-8 sm:flex-wrap  sm:text-xs lg:p-5">
             <p className="flex gap-5 font-semibold ">
