@@ -304,8 +304,13 @@ export default function Home() {
 
       <motion.section
         className="text-center mt-4 sm:mx-auto sm:w-[90%] "
+        whileInView={{
+          opacity:1,
+          
+        }}
         initial={{
           x: -10000,
+          opacity:0
         }}
         transition={{
           delay: 0.3,
@@ -326,23 +331,30 @@ export default function Home() {
       </motion.section>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }
+      
+      }
+      transition={{
+        delay: 0.2,
+        duration: 0.2,
+      }}
         className="lg:grid lg:grid-cols-3  gap-y-12 gap-x-5 max-w-screen-xl md:w-[80%] mx-auto mt-5 md:grid-cols-2
       sm:mx-auto sm:w-[90%] sm:grid-cols-1
       "
       >
         <motion.div
-          initial={{
-            y: -10000,
-          }}
-          animate={{
-            x: 0,
-          }}
-          transition={{
-            delay: 0.8,
-            duration: 0.5,
-          }}
+            initial={{
+              x: -1000,
+            }}
+            animate={{
+              x: 0
+            }}
+
+            transition={{
+              delay: 0.6,
+              duration: 0.4,
+            }}
         >
           <section>
             <Image
@@ -374,10 +386,10 @@ export default function Home() {
 
         <motion.div
           initial={{
-            y: -10000,
+            x: -1000,
           }}
           animate={{
-            x: 0,
+            x: 0
           }}
           transition={{
             delay: 0.6,
@@ -413,12 +425,12 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          initial={{
-            y: -10000,
-          }}
-          animate={{
-            x: 0,
-          }}
+            initial={{
+              x: -1000,
+            }}
+            animate={{
+              x: 0
+            }}
           transition={{
             delay: 0.4,
             duration: 0.5,
@@ -453,11 +465,11 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          initial={{
-            y: -10000,
+           initial={{
+            x: -1000,
           }}
           animate={{
-            x: 0,
+            x: 0
           }}
           transition={{
             delay: 0.8,
@@ -493,11 +505,11 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          initial={{
-            y: -10000,
+           initial={{
+            x: -1000,
           }}
           animate={{
-            x: 0,
+            x: 0
           }}
           transition={{
             delay: 0.6,
@@ -534,10 +546,10 @@ export default function Home() {
 
         <motion.div
           initial={{
-            y: -10000,
+            x: -1000,
           }}
           animate={{
-            x: 0,
+            x: 0
           }}
           transition={{
             delay: 0.4,
@@ -575,8 +587,14 @@ export default function Home() {
 
       <motion.section
         className="text-center mt-4 sm:mx-auto sm:w-[90%] "
+        whileInView={{
+          opacity:1,
+
+        }}
+       
         initial={{
-          x: -10000,
+          x: -1000,
+          opacity:0
         }}
         transition={{
           delay: 0.3,
@@ -725,13 +743,14 @@ export default function Home() {
             <motion.section
               className="mx-auto"
               initial={{
-                y: -10000,
+                x: -10000,
               }}
               animate={{
                 x: 0,
+
               }}
               transition={{
-                delay: 0.8,
+                delay: 0.3,
                 duration: 0.5,
               }}
             >
@@ -876,7 +895,9 @@ export default function Home() {
       </div>
       <motion.section
         className="text-center mt-4 lg:hidden md:block sm:block  sm:w-[90%] sm:mx-auto"
-        initial={{ x: -10000 }}
+        initial={{ x: -10000,opacity:0 }}
+     
+        whileInView={{ opacity: 1 }}
         transition={{
           delay: 0.3,
           duration: 0.6,
@@ -896,7 +917,10 @@ export default function Home() {
         </p>
       </motion.section>
 
-      <div className="mt-5">
+      <motion.div className="mt-5"
+         initial={{ opacity: 0 }}
+         whileInView={{ opacity: 1 }}
+      >
         <section className=" bgNeutralGray justify-center md:w-[90%] sm:w-[90%] mx-auto rounded-md p-7 ">
           <Image
             alt="icon"
@@ -931,12 +955,15 @@ export default function Home() {
             </span>
           </Link>
         </section>
-      </div>
+      </motion.div>
 
       <motion.section
         className="text-center mt-4 sm:w-[90%] lg:pt-5 lg:pb-5 "
+      
+        whileInView={{ opacity: 1 }}
         initial={{
           x: -10000,
+          opacity:0
         }}
         transition={{
           delay: 0.3,
@@ -958,7 +985,17 @@ export default function Home() {
       </motion.section>
 
       {/* large screen visible */}
-      <div className="lg:grid lg:grid-cols-3 md:grid-cols-2  sm:gap-y-6 gap-y-12 gap-x-5 max-w-screen-xl mx-auto mt-5  md:w-[90%] sm:w-[90%] sm:hidden ">
+      <motion.div
+         initial={{ opacity: 0,y:-1000000 }}
+         whileInView={{ opacity: 1 }}
+         animate={{
+          y:0
+         }}
+         transition={{
+          duration:0.6,
+          delay:0.3
+         }}
+      className="lg:grid lg:grid-cols-3 md:grid-cols-2  sm:gap-y-6 gap-y-12 gap-x-5 max-w-screen-xl mx-auto mt-5  md:w-[90%] sm:w-[90%] sm:hidden ">
         <motion.div>
           <section>
             <Image
@@ -1085,10 +1122,20 @@ export default function Home() {
             <p className="font-light textGray">25Apr</p>
           </section>
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* small screen visible */}
-      <div className="sm:grid sm:grid-cols-1    sm:gap-y-6  gap-x-5  mx-auto mt-5  sm:w-[90%] lg:hidden ">
+      <motion.div
+        initial={{ opacity: 0,y:-1000000 }}
+        whileInView={{ opacity: 1 }}
+        animate={{
+         y:0
+        }}
+        transition={{
+         duration:0.6,
+         delay:0.3
+        }}
+      className="sm:grid sm:grid-cols-1    sm:gap-y-6  gap-x-5  mx-auto mt-5  sm:w-[90%] lg:hidden ">
         <motion.div>
           <section>
             <Image
@@ -1215,7 +1262,7 @@ export default function Home() {
             <p className="font-light textGray">25Apr</p>
           </section>
         </motion.div>
-      </div>
+      </motion.div>
 
       <motion.section
         className="text-center mt-4  mx-auto md:w-[90%] sm:w-[90%] sm:mx-auto "
@@ -1286,7 +1333,17 @@ export default function Home() {
         </section>
       </motion.section>
 
-      <div className="mt-5">
+      <motion.div
+        initial={{ opacity: 0,x:-1000 }}
+        whileInView={{ opacity: 1 }}
+        animate={{
+         x:0
+        }}
+        transition={{
+         duration:1,
+         delay:0.3
+        }}
+      className="mt-5">
         <section className=" mx-auto bgNeutralGray justify-center text-center p-6 sm:w-[98%]  ">
           <p className="blue sm:text-sm">1% OF THE INDUSRTY</p>
 
@@ -1335,8 +1392,19 @@ export default function Home() {
           </form>
 
           <div className="flex lg:justify-center sm:justify-start gap-8 sm:flex-wrap  sm:text-xs lg:p-5">
-            <p className="flex gap-5 font-semibold ">
-              {" "}
+            <motion.p
+            
+            initial={{ opacity: 0,x:-1000 }}
+            whileInView={{ opacity: 1 }}
+            animate={{
+             x:0
+            }}
+            transition={{
+             duration:0.6,
+             delay:0.7
+            }}
+            className="flex gap-5 font-semibold ">
+              
               <Image
                 alt="checkbox"
                 src="/Checkbox.png"
@@ -1345,10 +1413,20 @@ export default function Home() {
                 className=""
               />{" "}
               Fully Secure
-            </p>
+            </motion.p>
 
-            <p className="flex gap-5 font-semibold ">
-              {" "}
+            <motion.p
+                initial={{ opacity: 0,x:-1000 }}
+                whileInView={{ opacity: 1 }}
+                animate={{
+                 x:0
+                }}
+                transition={{
+                 duration:0.6,
+                 delay:0.5
+                }}
+            className="flex gap-5 font-semibold ">
+            
               <Image
                 alt="checkbox"
                 src="/Checkbox.png"
@@ -1356,9 +1434,19 @@ export default function Home() {
                 height="20"
               />{" "}
               24/7 Support
-            </p>
+            </motion.p>
 
-            <p className="flex gap-5 font-semibold">
+            <motion.p
+                initial={{ opacity: 0,x:-1000 }}
+                whileInView={{ opacity: 1 }}
+                animate={{
+                 x:0
+                }}
+                transition={{
+                 duration:0.6,
+                 delay:0.3
+                }}
+            className="flex gap-5 font-semibold">
               {" "}
               <Image
                 alt="checkbox"
@@ -1367,12 +1455,22 @@ export default function Home() {
                 height="20"
               />{" "}
               Done Deal
-            </p>
+            </motion.p>
           </div>
         </section>
-      </div>
+      </motion.div>
 
-      <footer className=" dark:bg-gray-900 grayBg">
+      <motion.footer
+        initial={{ opacity: 0,x:-1000 }}
+        whileInView={{ opacity: 1 }}
+        animate={{
+         x:0
+        }}
+        transition={{
+         duration:1,
+         delay:0.3
+        }}
+      className=" dark:bg-gray-900 grayBg">
         <div className="mx-auto w-full max-w-screen-xl">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-flow-row-dense sm:grid-rows-2 gap-8 px-4 py-6 lg:py-8 ">
             <div className=" md:max-lg:order-1 sm:max-md:col-span-2">
@@ -1570,7 +1668,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </footer>
+      </motion.footer>
     </>
   );
 }
