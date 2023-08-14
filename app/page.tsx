@@ -28,7 +28,7 @@ export default function Home() {
 
     </nav> */}
 
-      <nav className="">
+      <nav className="lg:block sm:hidden">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <button
             data-collapse-toggle="navbar-default"
@@ -46,10 +46,11 @@ export default function Home() {
               viewBox="0 0 17 14"
             >
               <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+
+stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M1 1h15M1 7h15M1 13h15"
               />
             </svg>
@@ -121,6 +122,56 @@ export default function Home() {
         </div>
       </nav>
 
+      <Navbar
+  fluid={true}
+  rounded={false}
+  
+  className="lg:hidden"
+>
+  <Navbar.Brand >
+  <Link href="..">
+                  <Image alt="logo" width="150" height="28" src="/logo.png" />
+                </Link>
+    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+      
+    </span>
+  </Navbar.Brand>
+  <Navbar.Toggle />
+  <Navbar.Collapse className="text-white ">
+    <div className="">
+    <Navbar.Link
+      href="/navbars"
+      active={true}
+    >
+      Home
+    </Navbar.Link>
+    <Navbar.Link href="/navbars">
+      Our Products
+    </Navbar.Link>
+    <Navbar.Link href="/navbars">
+      Resources
+    </Navbar.Link>
+    </div>
+    <Navbar.Link href="/navbars">
+      Contact
+    </Navbar.Link>
+   
+
+    <div className="signup flex  text-white gap-2">
+            <Navbar.Link  href="" className="px-3 py-3 ">
+              Log in
+            </Navbar.Link >
+            <Navbar.Link 
+              href=".."
+              className="signInBtn px-3 py-3 rounded-md hover:bg-blue-500 hover:translate-x-2 transition-all"
+            >
+              Sign Up
+            </Navbar.Link >
+          </div>
+  </Navbar.Collapse>
+
+  
+</Navbar>
       <main className="banner">
         <motion.section className=" max-w-screen-xl ">
           <div className="lg:grid lg:grid-cols-2 lg:grid-flow-col sm:flex  sm:flex-col-reverse md:flex  md:flex-col-reverse ">
@@ -496,7 +547,7 @@ export default function Home() {
       </motion.section>
 
       <main className="max-w-screen-xl mx-auto mt-8 md:w-[80%] container sm:mx-auto sm:w-[90%]">
-        <div className="lg:grid lg:grid-cols-2  gap-x-4 md:flex  md:flex-col-reverse   md-mx-auto sm:flex sm:flex-col-reverse sm-gap-x-4">
+        <div className="lg:grid lg:grid-cols-2  gap-x-4 md:flex sm:max-md:gap-y-6 md:max-lg:gap-y-6 md:flex-col-reverse   md-mx-auto sm:flex sm:flex-col-reverse sm-gap-x-4 p-8">
           <section className=" flex flex-col gap-y-8 md:mx-auto md:mt-8">
             <motion.div className="col flex gap-x-6 ">
               <Image
@@ -535,7 +586,7 @@ export default function Home() {
               </aside>
             </motion.div>
 
-            <motion.div className="col flex gap-x-6 ">
+            <motion.div className="col flex gap-x-6">
               <Image
                 alt="icon"
                 src="/icon8.png"
@@ -596,7 +647,7 @@ export default function Home() {
             </motion.div>
           </section>
 
-          <section className=" md:mx-auto ">
+          <section className=" md:mx-auto sm:max-lg:mt-5 ">
             <Image
               sizes="(max-width:768px) 80vw, (max-width:320px) 80vw"
               alt="photo"
@@ -753,7 +804,7 @@ export default function Home() {
         </main>
       </div>
       <motion.section
-        className="text-center mt-4lg: hidden md:block sm:block  sm:w-[90%] sm:mx-auto"
+        className="text-center mt-4 lg:hidden md:block sm:block  sm:w-[90%] sm:mx-auto"
         initial={{ x: -10000 }}
         transition={{
           delay: 0.3,
@@ -764,7 +815,7 @@ export default function Home() {
         }}
         viewport={{ once: true }}
       >
-        <motion.h1 className="font-bold text-3xl text-center mt-12 sm:text-xl">
+        <motion.h1 className="font-bold text-3xl text-center mt-12 sm:text-xl ">
           What Our Customers Say
         </motion.h1>
         <p className="mt-2 textGray font-normal sm:text-md">
@@ -775,7 +826,7 @@ export default function Home() {
       </motion.section>
 
       <div className="mt-5">
-        <section className=" bgNeutralGray justify-center md:w-[90%] sm:w-[90%] mx-auto rounded-md ">
+        <section className=" bgNeutralGray justify-center md:w-[90%] sm:w-[90%] mx-auto rounded-md p-7 ">
           <Image
             alt="icon"
             src="/lookscout.png"
@@ -784,16 +835,35 @@ export default function Home() {
             height="22"
           />
 
-          <p className=" text-center  font-semibold text-2xl  text-slate-800 p-4 sm:p-0 mt-5 rounded sm-text-start sm:text-sm">
+          <p className=" text-center lg:w-[72%] lg:object-fill lg:mx-auto lg:text-center font-semibold  text-2xl  lg:text-3xl text-slate-800 p-4 sm:p-0 mt-5 rounded sm-text-start sm:text-sm">
             Thank you for making it painless, pleasant and most of all hassle{" "}
-            <br /> free! I love LookScout. I can't say enough about LookScout.{" "}
-            <br /> Great job, I will definitely be ordering again!{" "}
+             free! I love LookScout. I can't say enough about LookScout.{" "}
+             Great job, I will definitely be ordering again!{" "}
           </p>
+          <Link
+              href=".."
+              className="flex blue lg:w-[72%] lg:text-center lg:mx-auto lg:mt-5  gap-3 font-bold  lg:justify-ccenter  group"
+            >
+              <div>
+                <Image
+                  src="/Avatar 3.png"
+                  className="rounded-full group:"
+                  width="40"
+                  height="40"
+                  alt=""
+                />
+              </div>
+              <span className="text-sm flex flex-col  group-hover:translate-x-4 : hover:translate-x-4 transition-all duration-300 ease-in-out blue  font-bold  ">
+                <p className="font-bold  text-slate-900">Lisa smith</p>
+
+                <p className="font-light textGray">CEO</p>
+              </span>
+            </Link>
         </section>
       </div>
 
       <motion.section
-        className="text-center mt-4 sm:w-[90%] "
+        className="text-center mt-4 sm:w-[90%] lg:pt-5 lg:pb-5 "
         initial={{
           x: -10000,
         }}
@@ -809,7 +879,7 @@ export default function Home() {
         <motion.h1 className="font-bold text-3xl text-center mt-12 sm:text-lg">
           Latest Blog Post
         </motion.h1>
-        <p className="mt-2 textGray font-normal">
+        <p className="mt-2 textGray font-normal lg:w-[72%] lg:object-fill lg:mx-auto">
           Completely synergize resource taxing relationships via premier niche
           markets. Professionally cultivate <br /> one-to-one customer service
           with robust ideas.
@@ -1090,7 +1160,7 @@ export default function Home() {
         <motion.h1 className="font-bold text-3xl text-center mt-12 sm:text-xl">
           Proud to Be Used By
         </motion.h1>
-        <p className="mt-2 textGray font-normal  md: break-words">
+        <p className="mt-2 textGray font-normal  md: break-words lg:w-[72%] lg:object-fill lg:mx-auto lg:pt-5 lg:pb-5">
         Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
         </p>
 
@@ -1144,7 +1214,7 @@ export default function Home() {
         <section className=" mx-auto bgNeutralGray justify-center text-center p-6 sm:w-[98%]  ">
           <p className="blue sm:text-sm">1% OF THE INDUSRTY</p>
 
-          <p className=" text-center  font-bold text-3xl sm:text-xl  text-slate-800 p-4 mt-5  ">
+          <p className=" text-center  font-bold lg:text-3xl sm:text-xl  text-slate-800 p-4 mt-5 lg:mx-auto lg:pt-5 lg:pb-5 lg:w-[72%] ">
             Welcome to your new digital reality that will rock  your world
             truly at all throughout.{" "}
           </p>
@@ -1189,7 +1259,7 @@ export default function Home() {
           </form>
 
 
-          <div className="flex justify-center sm:justify-start gap-8 sm:flex-wrap  sm:text-xs">
+          <div className="flex lg:justify-center sm:justify-start gap-8 sm:flex-wrap  sm:text-xs lg:p-5">
             <p className="flex gap-5 font-semibold ">
               {" "}
               <Image
@@ -1229,8 +1299,8 @@ export default function Home() {
 
       <footer className=" dark:bg-gray-900 grayBg">
         <div className="mx-auto w-full max-w-screen-xl">
-          <div className="grid  md:grid-cols-2 sm:grid-flow-row-dense sm:grid-rows-2 gap-8 px-4 py-6 lg:py-8 ">
-            <div className=" md:order-1 sm:max-md:col-span-2">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-flow-row-dense sm:grid-rows-2 gap-8 px-4 py-6 lg:py-8 ">
+            <div className=" md:max-lg:order-1 sm:max-md:col-span-2">
               <ul className="text-gray-500 dark:text-gray-400 font-medium mt-4">
                 <li className="mb-4">
                   <Link href="#" className="font-bold text-slate-200">
@@ -1245,7 +1315,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="md:order-3">
+            <div className=" md:max-lg:order-3">
               <ul className="text-gray-500 dark:text-gray-400 font-medium mt-4">
                 <li className="mb-4">
                   <Link href="#" className=" font-bold text-slate-200">
@@ -1274,7 +1344,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="md:order-4">
+            <div className=" md:max-lg:order-4">
               <ul className="text-gray-500 dark:text-gray-400 font-medium mt-4">
                 <li className="mb-4">
                   <Link href="#" className="font-bold text-slate-200">
@@ -1303,7 +1373,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="md:order-2 sm:max-md:col-span-2">
+            <div className="md:max-lg:order-2 sm:max-md:col-span-2">
               <ul className="text-gray-500 dark:text-gray-400 font-medium mt-4">
                 <li className="mb-4">
                   <Link href="#" className="font-bold text-slate-200">
