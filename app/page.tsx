@@ -7,6 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+
+ 
   return (
     <>
       {/* <nav className='w-full'>
@@ -360,6 +362,7 @@ export default function Home() {
             <Image
               alt="icon"
               src="/icon1.png"
+              priority={true}
               className=" cursor-pointer object-fit hover:rotate-180 transition-all ease-in-out"
               width="48"
               height="48"
