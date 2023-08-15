@@ -986,10 +986,10 @@ export default function Home() {
 
       {/* large screen visible */}
       <motion.div
-         initial={{ opacity: 0,y:-1000000 }}
+         initial={{ opacity: 0,x:-1000 }}
          whileInView={{ opacity: 1 }}
          animate={{
-          y:0
+          x:0
          }}
          transition={{
           duration:0.6,
@@ -1016,9 +1016,9 @@ export default function Home() {
           </section>
 
           <section className="flex justify-between container">
-            <Link
-              href=".."
-              className="flex blue  gap-3 font-bold   my-auto group"
+            <p
+             
+              className="flex blue cursor-pointer  gap-3 font-bold   my-auto group"
             >
               <div>
                 <Image
@@ -1034,7 +1034,7 @@ export default function Home() {
 
                 <p className="font-light textGray">CEO</p>
               </span>
-            </Link>
+            </p>
             <p className="font-light textGray">25Apr</p>
           </section>
         </motion.div>
@@ -1126,7 +1126,7 @@ export default function Home() {
 
       {/* small screen visible */}
       <motion.div
-        initial={{ opacity: 0,y:-1000000 }}
+        initial={{ opacity: 0,y:-1000 }}
         whileInView={{ opacity: 1 }}
         animate={{
          y:0
