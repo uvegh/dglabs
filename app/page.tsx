@@ -1,34 +1,37 @@
 "use client";
 import { Navbar } from "flowbite-react";
 import { Dropdown } from "flowbite-react";
-import { motion } from "framer-motion";
+import { motion,AnimatePresence, useScroll } from "framer-motion";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import Box from "./components/Box";
 
 export default function Home() {
 
- 
+
+
+  const{scrollYProgress}=useScroll()
   return (
+  
     <>
-      {/* <nav className='w-full'>
-<div className="w-10/12 flex justify-between p-3">
-<Link href="..">
+{/* scroll anaimation */}
+  <motion.div className="top-0 left-0  bg-red-300   "
+  
+  style={{
+    scaleX:scrollYProgress,
+    transformOrigin:"0%",
+    position:"fixed",
+    top:0,
+    right:0,
+    left:0,
+    height:2
 
-<Image alt='logo' width="150" height="28" src="/logo.png"/>
+  }}>
+    
+     </motion.div>
 
-
-</Link>
-<div className='flex justify-between'>
-<ul>
-  <li>
-    Home
-  </li>
-</ul>
-</div>
-</div>
-
-    </nav> */}
 
       <nav className="lg:block sm:hidden">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -154,6 +157,7 @@ export default function Home() {
           </div>
         </Navbar.Collapse>
       </Navbar>
+   
       <motion.main
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -308,10 +312,12 @@ export default function Home() {
         className="text-center mt-4 sm:mx-auto sm:w-[90%] "
         whileInView={{
           opacity:1,
+          x:0
+
           
         }}
         initial={{
-          x: -10000,
+          x: -1000,
           opacity:0
         }}
         transition={{
@@ -619,8 +625,8 @@ export default function Home() {
       </motion.section>
 
       <motion.main
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0,scale:0 ,x:-100}}
+        whileInView={{ opacity: 1 ,scale:1,x:0}}
         className="max-w-screen-xl mx-auto mt-8 md:w-[80%] container sm:mx-auto sm:w-[90%]"
       >
         <div className="lg:grid lg:grid-cols-2  gap-x-4 md:flex sm:max-md:gap-y-6 md:max-lg:gap-y-6 md:flex-col-reverse   md-mx-auto sm:flex sm:flex-col-reverse sm-gap-x-4 p-8">
@@ -739,8 +745,8 @@ export default function Home() {
       <div className="grayBg  pb-5 sm:pt-5">
         <motion.section
           className="max-w-screen-xl mx-auto pt-12 sm:mx-auto  sm:w-[90%]"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0 ,scale:0,x:-100}}
+          whileInView={{ opacity: 1 ,scale:1,x:0}}
         >
           <div className="lg:grid lg:grid-cols-2  gap-x-4 md:grid-cols-1  md:gap-y-8 sm:grid-cols-1 sm:gap-y-8">
             <motion.section
@@ -963,18 +969,18 @@ export default function Home() {
       <motion.section
         className="text-center mt-4 sm:w-[90%] lg:pt-5 lg:pb-5 "
       
-        whileInView={{ opacity: 1 }}
+        whileInView={{ opacity: 1,x:0,scale:1 }}
         initial={{
-          x: -10000,
-          opacity:0
+          x: -100,
+          opacity:0,scale:0
         }}
         transition={{
           delay: 0.3,
           duration: 0.6,
         }}
-        animate={{
-          x: 0,
-        }}
+        // animate={{
+        //   x: 0,
+        // }}
         viewport={{ once: true }}
       >
         <motion.h1 className="font-bold text-3xl text-center mt-12 sm:text-lg">
@@ -989,11 +995,9 @@ export default function Home() {
 
       {/* large screen visible */}
       <motion.div
-         initial={{ opacity: 0,x:-1000 }}
-         whileInView={{ opacity: 1 }}
-         animate={{
-          x:0
-         }}
+         initial={{ opacity: 1,x:-1000 }}
+         whileInView={{ opacity: 1,scale:1,x:1 }}
+         viewport={{once:true}}
          transition={{
           duration:0.6,
           delay:0.3
@@ -1129,11 +1133,11 @@ export default function Home() {
 
       {/* small screen visible */}
       <motion.div
-        initial={{ opacity: 0,y:-1000 }}
-        whileInView={{ opacity: 1 }}
-        animate={{
-         y:0
-        }}
+        initial={{ opacity: 0,y:-1000,scale:0 }}
+        whileInView={{ opacity: 1,scale:1,y:0 }}
+        // animate={{
+        //  y:0
+        // }}
         transition={{
          duration:0.6,
          delay:0.3
@@ -1270,14 +1274,16 @@ export default function Home() {
       <motion.section
         className="text-center mt-4  mx-auto md:w-[90%] sm:w-[90%] sm:mx-auto "
         initial={{
-          x: -10000,
+          x: -100,
+          opacity:1
         }}
         transition={{
           delay: 0.3,
           duration: 0.6,
         }}
-        animate={{
-          x: 0,
+        whileInView={{
+          x:0,
+          opacity:1
         }}
         viewport={{ once: true }}
       >
