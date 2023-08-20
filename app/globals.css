@@ -9,6 +9,10 @@ border-bottom:  1px solid rgba(100, 142, 247, 1);
 
 ;
 }
+.navbar{
+  background: rgba(43, 99, 217, 1);
+  border-bottom:  1px solid rgba(100, 142, 247, 1);
+}
 .blue{
 color: rgba(67, 126, 247, 1);
 

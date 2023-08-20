@@ -126,7 +126,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <Navbar fluid={true} rounded={false} className="lg:hidden">
+      <Navbar fluid={true} rounded={false} className="lg:hidden navbar">
         <Navbar.Brand>
           <Link href="..">
             <Image alt="logo" width="150" height="28" src="/logo.png" />
